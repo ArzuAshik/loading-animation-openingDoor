@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: skyblue;
+}
+
+.container h1{
+    font-size: 4rem;
+}
+
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background: rgb(33, 64, 105);
+}
+
+.loader .input-range {
+    /* display: flex; */
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loader h2{
+    font-size: 2em;
+}
+.loader .input-range h2::after{
+    content: '...'
+}
+
+
+.loader h2 span::after{
+    content: "%";
+}
+
+/* for input */
+.loader input[type="range"]{
+    width: 40%;
+    background: gray;
+    margin-top: 10px;
+}
+
+.loader .range::-webkit-slider-thumb{
+    appearance: none;
+    background: #000;
+}
+
+/* for progress bar */
+.progress {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background: gray;
+    border: 1px solid #fff;
+    box-shadow: inset 0px -5px 10px black;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress h2{
+    z-index: 999;
+}
+
+.progress #progress-bar {
+    width: 0%;
+    transition: all 0.3s;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background: red;
+}
+
+
+/* glass */
+.glass{
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    z-index: 9999;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255,255,255, 0.05);
+    backdrop-filter: blur(15px);
+}
+
+.glass.top{
+    top:0;
+}
+.glass.left{
+    left:0;
+}
+.glass.bottom{
+    bottom:0;
+}
+.glass.right{
+    right:0;
+}

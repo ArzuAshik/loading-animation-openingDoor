@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opening Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome 😊</h1>
+    </div>
+    <div class="loader">
+        <div id="glass1" class="glass top left"></div>
+        <div id="glass2" class="glass top right"></div>
+        <div id="glass3" class="glass bottom left"></div>
+        <div id="glass4" class="glass bottom right"></div>
+        <div class="input-range">
+            <h2>Loading <span>0</span></h2>
+            <input class="range" onChange={handleChange(this.value)} type="range" min="0" max="100" value="50">
+        </div>
+        <div class="progress">
+            <div id="progress-bar"></div>
+            <h2><span id="progress-count">0</span></h2>
+        </div>
+    </div>
+</body>
+</html>
